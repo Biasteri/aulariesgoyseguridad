@@ -1,0 +1,138 @@
+<em>Por Antonio Cadarso</em>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confusión de Frecuencias: Un Error de Comunicación</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .option {
+            margin: 20px 0;
+        }
+        .evaluation {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            border-radius: 4px;
+        }
+        button {
+            padding: 10px 15px;
+            border: none;
+            background: #4caf50;
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background: #45a049;
+        }
+        .reveal-solution {
+            margin-top: 20px;
+            background: #2196f3;
+        }
+        .solution {
+            display: none;
+            margin-top: 20px;
+            padding: 15px;
+            background: #e3f2fd;
+            border-left: 4px solid #2196f3;
+            border-radius: 4px;
+        }
+    </style>
+    <script>
+        function toggleEvaluation(id) {
+            const evaluation = document.getElementById(id);
+            evaluation.style.display = evaluation.style.display === 'none' ? 'block' : 'none';
+        }
+
+        function revealSolution() {
+            const solution = document.getElementById('solution');
+            solution.style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Confusión de Frecuencias: Un Error de Comunicación</h1>
+        <p><strong>Contexto:</strong> Durante un vuelo en espacio aéreo controlado, el piloto introduce una frecuencia incorrecta en la radio y pierde contacto con ATC. Mientras intenta resolver la situación, el tráfico aéreo en la zona aumenta, complicando la coordinación.</p>
+
+        <div class="option">
+            <h2>Opción 1: Verificar y Reintroducir la Frecuencia Correcta</h2>
+            <p>Consulta las cartas de navegación para confirmar la frecuencia y vuelve a introducirla en la radio para restablecer contacto.</p>
+            <button onclick="toggleEvaluation('evaluation1')">Ver Evaluación Crítica</button>
+            <div class="evaluation" id="evaluation1">
+                <strong>Ventajas:</strong>
+                <ul>
+                    <li>Restablece el contacto con ATC rápidamente.</li>
+                    <li>Permite recibir instrucciones actualizadas.</li>
+                </ul>
+                <strong>Desventajas:</strong>
+                <ul>
+                    <li>Consume tiempo si el piloto no tiene acceso rápido a la información.</li>
+                    <li>El tráfico aéreo en la zona puede seguir aumentando mientras se resuelve.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="option">
+            <h2>Opción 2: Cambiar al Código Transponder 7600</h2>
+            <p>Ajusta el transponder al código 7600 para indicar una falla de comunicación y espera que ATC te identifique visualmente o con radar.</p>
+            <button onclick="toggleEvaluation('evaluation2')">Ver Evaluación Crítica</button>
+            <div class="evaluation" id="evaluation2">
+                <strong>Ventajas:</strong>
+                <ul>
+                    <li>Informa inmediatamente al ATC sobre el problema.</li>
+                    <li>Permite que los controladores ajusten el tráfico a tu alrededor.</li>
+                </ul>
+                <strong>Desventajas:</strong>
+                <ul>
+                    <li>No permite recibir instrucciones directas de inmediato.</li>
+                    <li>Podría generar confusión si el problema es temporal y se resuelve rápidamente.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="option">
+            <h2>Opción 3: Mantener Curso y Altitud según el Plan de Vuelo</h2>
+            <p>Continúa volando según el plan de vuelo presentado mientras intentas solucionar el problema de comunicación.</p>
+            <button onclick="toggleEvaluation('evaluation3')">Ver Evaluación Crítica</button>
+            <div class="evaluation" id="evaluation3">
+                <strong>Ventajas:</strong>
+                <ul>
+                    <li>Proporciona previsibilidad para ATC y otras aeronaves.</li>
+                    <li>Minimiza la necesidad de tomar decisiones inmediatas bajo presión.</li>
+                </ul>
+                <strong>Desventajas:</strong>
+                <ul>
+                    <li>No aborda directamente el problema de comunicación.</li>
+                    <li>Riesgo de conflicto con tráfico aéreo en la zona.</li>
+                </ul>
+            </div>
+        </div>
+
+        <button class="reveal-solution" onclick="revealSolution()">Desvelar Solución Recomendada</button>
+        <div class="solution" id="solution">
+            <h2>Solución Recomendada</h2>
+            <p>La opción 1 es la más adecuada: Verificar y Reintroducir la Frecuencia Correcta. Esto restablece el contacto con ATC rápidamente y asegura una coordinación eficiente en un espacio aéreo congestionado.</p>
+        </div>
+    </div>
+</body>
+</html>
